@@ -29,14 +29,17 @@ const LoginContextProvider = ({children}) => {
     }
 
 // SIGN UP
-const handlesignup=async()=>{
+const handlesignup=async(loading,Setloading)=>{
     const url = URL+'users/'
     const {name,email,password,re_password} = state
     const data = {name,email,password,re_password}
+    Setloading(true)
     try {
         const {data:res} = await axios.post(url,data)
         console.log(res);
+        Setloading(false)
       } catch (error) {
+        Setloading(false)
         console.log(error);
         const error_message = error.response.data
         let keys = []
@@ -56,11 +59,13 @@ const handlesignup=async()=>{
 
 // Login
 
-const handlelogin=async(loginbtn,setLoginbtn,e)=>{
+const handlelogin=async(loginbtn,setLoginbtn,e,loading,Setloading)=>{
+    
     const url = URL+'jwt/create/'
     const vurl = URL+'jwt/verify/'
     const {email,password} = state
     const data = {email,password}
+    Setloading(!loading)
     
     try {
         const {data:res} = await axios.post(url,data)
@@ -72,9 +77,12 @@ const handlelogin=async(loginbtn,setLoginbtn,e)=>{
             console.log(response);
             setCookie('token',JSON.stringify(res.access))
             setCookie('refresh',JSON.stringify(res.refresh))
+            
             setLoginbtn(!loginbtn)
+            
            
         } catch (error) {
+            console.log(error);
             
         }
         

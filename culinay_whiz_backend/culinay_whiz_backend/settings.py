@@ -15,7 +15,7 @@ SECRET_KEY = "django-insecure-ojbe23j(o&vgqar%*^hze4p8cxm8b(42do=i_7g6cl7lz0d%h#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['culinary-whiz-backend.onrender.com']
+ALLOWED_HOSTS = ['culinary-whiz-backend.onrender.com','127.0.0.1:8000','127.0.0.1']
 
 
 # Application definition
@@ -127,13 +127,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = 'api.User'
 
 # REST FRAMEWORK 
-REST_FRAMEWORK = {
+# REST_FRAMEWORK = {
     
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-       'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#        'rest_framework_simplejwt.authentication.JWTAuthentication',
         
-    ),
-}
+#     ),
+# }
 
 # EMAIL CONFIGURATION 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -177,5 +177,5 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:9000",
     "http://192.168.1.10:5173",
-    "https://culinary-whiz-frontend.onrender.com/"
+    "https://culinary-whiz-frontend.onrender.com"
 ]
