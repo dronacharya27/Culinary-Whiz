@@ -8,12 +8,16 @@ const initiallogindata={
     password:'',
     re_password:''
 }
+
 const URL='https://culinary-whiz-backend.onrender.com/api/auth/'
 const LoginContext = createContext()
 
 const LoginContextProvider = ({children}) => {
+    const [signup,setSignup]=useState(false)
     const[state,dispatch]=useReducer(LoginReducer,initiallogindata)
     const[error_msg,Seterror_msg]=useState([])
+    const [loading,setLoading] = useState(false)
+    const [loginbtn,setLoginbtn]=useState(false)
    
 
 
@@ -29,17 +33,18 @@ const LoginContextProvider = ({children}) => {
     }
 
 // SIGN UP
-const handlesignup=async(loading,Setloading)=>{
+const handlesignup=async()=>{
     const url = URL+'users/'
     const {name,email,password,re_password} = state
     const data = {name,email,password,re_password}
-    Setloading(true)
+    setLoading(true)
     try {
         const {data:res} = await axios.post(url,data)
         console.log(res);
-        Setloading(false)
+        setLoading(false)
+        setSignup(false)
       } catch (error) {
-        Setloading(false)
+        setLoading(false)
         console.log(error);
         const error_message = error.response.data
         let keys = []
@@ -59,13 +64,14 @@ const handlesignup=async(loading,Setloading)=>{
 
 // Login
 
-const handlelogin=async(loginbtn,setLoginbtn,e,loading,Setloading)=>{
+const handlelogin=async()=>{
     
     const url = URL+'jwt/create/'
     const vurl = URL+'jwt/verify/'
     const {email,password} = state
     const data = {email,password}
-    Setloading(!loading)
+    setLoading(true)
+   
     
     try {
         const {data:res} = await axios.post(url,data)
@@ -77,13 +83,14 @@ const handlelogin=async(loginbtn,setLoginbtn,e,loading,Setloading)=>{
             console.log(response);
             setCookie('token',JSON.stringify(res.access))
             setCookie('refresh',JSON.stringify(res.refresh))
-            
+            setLoading(false)
             setLoginbtn(!loginbtn)
+            
             
            
         } catch (error) {
             console.log(error);
-            
+            setLoading(false)
         }
         
         
@@ -91,6 +98,7 @@ const handlelogin=async(loginbtn,setLoginbtn,e,loading,Setloading)=>{
 
       } catch (error) {
         console.log(error);
+        setLoading(false)
         const error_message = error.response.data
         let keys = []
         for (let key in error_message){
@@ -112,7 +120,7 @@ const handlelogout=()=>{
     removeCookie("token")
 }
   return (
-    <LoginContext.Provider value={{handledata,state,handlesignup,error_msg,handlelogin,cookie,handlelogout}} >
+    <LoginContext.Provider value={{loading,handledata,state,handlesignup,error_msg,handlelogin,cookie,handlelogout,loginbtn,setLoginbtn,setSignup,signup}} >
         {children}
     </LoginContext.Provider>
   )

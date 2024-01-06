@@ -4,10 +4,12 @@ import { useLoginContext } from '../../context/LoginContext'
 import {LogOut, Settings, Utensils, UtensilsCrossed} from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useFilterContext } from '../../context/FilterContext'
-const Navbar = ({loginbtn,setLoginbtn}) => {
+const Navbar = () => {
   const{cookie,handlelogout}=useLoginContext()
   const{filters,updateFilterValue} = useFilterContext()
+  const{loginbtn,setLoginbtn}=useLoginContext()
   const navigate = useNavigate()
+
  const handleLoginbtn=()=>{
   setLoginbtn(!loginbtn)
  }

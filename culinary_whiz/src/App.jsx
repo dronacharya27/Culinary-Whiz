@@ -8,16 +8,16 @@ import React, { useState } from 'react'
 
 import {BrowserRouter as Router,Route,Routes, NavLink} from 'react-router-dom'
 function App() {
-  const [loginbtn,setLoginbtn]=useState(false)
+ 
 
   return (
     <>
    
     <Router>
-    <Navbar loginbtn={loginbtn} setLoginbtn={setLoginbtn}/>
+    <Navbar/>
       <Routes>
      
-      <Route path='/' element={ <HomePage loginbtn={loginbtn} setLoginbtn={setLoginbtn}/>}/>
+      <Route path='/' element={ <HomePage/>}/>
       <Route path='/recipes/:id/:name' element={<Recipe/>}/>
       <Route path='/add-recipe' element={ <RecipeAdd/>}/>
       <Route path='/recipes' element={ <RecipeSection/>}/>

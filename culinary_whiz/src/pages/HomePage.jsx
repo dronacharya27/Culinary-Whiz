@@ -10,13 +10,13 @@ import RecipeAdd from '../components/RecipeAdd/RecipeAdd'
 
 
 
-const HomePage = ({loginbtn,setLoginbtn}) => {
+const HomePage = () => {
   
 
   return (
     <div className='homepage'>
     
-    <LoginModal loginbtn={loginbtn} setLoginbtn={setLoginbtn}/>
+    <LoginModal/>
     <HeroSection/>
     <LatestSection/>
     <AboutSection/>

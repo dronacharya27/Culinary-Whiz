@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import './LoginModal.css'
 import {ColorRing} from 'react-loader-spinner'
 import { useLoginContext } from '../../context/LoginContext'
-const LoginModal = ({loginbtn,setLoginbtn}) => {
-    const [loading,Setloading]=useState(false)
-    const [signup,setSignup]=useState(false)
-    const {state,handledata,handlesignup,error_msg,handlelogin} = useLoginContext()
+const LoginModal = () => {
+   
+    const {state,handledata,handlesignup,error_msg,handlelogin,loading,loginbtn,setLoginbtn,signup,setSignup} = useLoginContext()
     const handlesignupbtn=()=>{
         
         setSignup(!signup)
@@ -26,10 +25,7 @@ const LoginModal = ({loginbtn,setLoginbtn}) => {
         <div className="mheader">
             <div>SIGNUP</div></div>
         <div className="minput">
-        <div className="namediv idiv">
-             
-             <input type="text" name='name' id='name' placeholder='Name' onChange={handledata}/>
-         </div>
+       
             <div className="emaildiv idiv">
              
                 <input type="text" name='email' id='email' placeholder='Email' onChange={handledata}/>
@@ -43,8 +39,17 @@ const LoginModal = ({loginbtn,setLoginbtn}) => {
             
             <input type="password" name='re_password' id='re_password' placeholder='Retype Password' onChange={handledata}/>
         </div>
-        {loading?<div className="loaders">
-        <ColorRing
+        <div className="namediv idiv">
+             
+             <input type="text" name='name' id='name' placeholder='Name' onChange={handledata}/>
+         </div>
+        
+        <div className='errormsg'>
+        {error_msg[0]}
+                    </div>
+                    {loading?
+                    <div className="loaders">
+                        <ColorRing
   visible={true}
   height="80"
   width="80"
@@ -53,12 +58,10 @@ const LoginModal = ({loginbtn,setLoginbtn}) => {
   wrapperClass="color-ring-wrapper"
   colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
   />
-        </div>:<p></p>}
-        <div className='errormsg'>
-        {error_msg[0]}
-                    </div>
+</div>:<p></p>}
+                    
             <div className='loginsubmitbtn idiv'>
-                <button type="submit" onClick={()=>handlesignup(loading,Setloading)}>Sign Up</button>
+                <button type="submit" onClick={handlesignup}>Sign Up</button>
                 
             </div>
             <div className='signup' >
@@ -78,8 +81,12 @@ const LoginModal = ({loginbtn,setLoginbtn}) => {
             <div className="passdiv idiv">
                 <input type="password" name='password' id='password' placeholder='Password'  onChange={handledata}/>
             </div>
-            {loading?<div className="loaders">
-        <ColorRing
+            <div className='errormsg'>
+        {error_msg}
+                    </div>
+                    {loading?
+                    <div className="loaders">
+                        <ColorRing
   visible={true}
   height="80"
   width="80"
@@ -88,13 +95,9 @@ const LoginModal = ({loginbtn,setLoginbtn}) => {
   wrapperClass="color-ring-wrapper"
   colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
   />
-        </div>:<p></p>}
-            
-            <div className='errormsg'>
-        {error_msg}
-                    </div>
+</div>:<p></p>}
             <div className='loginsubmitbtn idiv'>
-                <button type="submit" onClick={()=>handlelogin(loginbtn,setLoginbtn,loading,Setloading)}>LogIn</button>
+                <button type="submit" onClick={handlelogin}>LogIn</button>
                 
             </div>
             <div className='signup' >
