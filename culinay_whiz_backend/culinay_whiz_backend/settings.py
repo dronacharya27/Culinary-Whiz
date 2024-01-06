@@ -127,13 +127,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = 'api.User'
 
 # REST FRAMEWORK 
-# REST_FRAMEWORK = {
+REST_FRAMEWORK = {
     
-#     'DEFAULT_AUTHENTICATION_CLASSES': (
-#        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+       'rest_framework_simplejwt.authentication.JWTAuthentication',
         
-#     ),
-# }
+    ),
+}
 
 # EMAIL CONFIGURATION 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

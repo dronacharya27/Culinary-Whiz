@@ -95,6 +95,7 @@ const postdata = async(navigate)=>{
     const {data:res3} = await axios.post(TOKENURL,refreshdata)
     console.log(res3)
     const token = res3.access
+    console.log(token)
     try {
         const {data:res2} = await axios.get(URL2,{
             headers:{
