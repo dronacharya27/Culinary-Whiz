@@ -15,7 +15,7 @@ SECRET_KEY = "django-insecure-ojbe23j(o&vgqar%*^hze4p8cxm8b(42do=i_7g6cl7lz0d%h#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['culinary-whiz-backend.onrender.com']
 
 
 # Application definition
