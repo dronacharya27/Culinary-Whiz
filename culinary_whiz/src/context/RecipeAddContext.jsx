@@ -4,9 +4,9 @@ import RecipeAddReducer from "../reducer/RecipeAddReducer";
 import axios from "axios";
 import { useLoginContext } from "./LoginContext";
 const RecipeAddContext = createContext()
-const URL ='http://127.0.0.1:8000/recipe/'
-const URL2= 'http://127.0.0.1:8000/api/auth/users/me/'
-const TOKENURL='http://127.0.0.1:8000/api/auth/jwt/refresh/'
+const URL ='https://culinary-whiz-backend.onrender.com/recipe/'
+const URL2= 'https://culinary-whiz-backend.onrender.com/api/auth/users/me/'
+const TOKENURL='https://culinary-whiz-backend.onrender.com/api/auth/jwt/refresh/'
 const RecipeAddContextProvider =({children})=>{
     
     const[data,setData]=useState({

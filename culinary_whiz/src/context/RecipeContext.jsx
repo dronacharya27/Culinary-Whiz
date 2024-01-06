@@ -4,7 +4,7 @@ import RecipeReducer from "../reducer/RecipeReducer";
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 
 const RecipeContext = createContext()
-const URL = 'http://127.0.0.1:8000/recipe/'
+const URL = 'https://culinary-whiz-backend.onrender.com/recipe/'
 const initialdata = {recipes:[]}
 const RecipeContextProvider=({children})=>{
 const [state,dispatch] = useReducer(RecipeReducer,initialdata)

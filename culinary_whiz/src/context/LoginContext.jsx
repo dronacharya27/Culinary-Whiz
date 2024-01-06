@@ -8,7 +8,7 @@ const initiallogindata={
     password:'',
     re_password:''
 }
-const URL='http://127.0.0.1:8000/api/auth/'
+const URL='https://culinary-whiz-backend.onrender.com/api/auth/'
 const LoginContext = createContext()
 
 const LoginContextProvider = ({children}) => {
