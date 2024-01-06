@@ -16,15 +16,15 @@ const Navbar = () => {
   return (
     <>
     {cookie.token?<div className='mainnav'>
-    <Link to='/' ><div className="rightnav">
-      <div className="logo2">
+    <div className="rightnav">
+    <Link to='/' ><div className="logo2">
         <img src="/Navbar/logo1.png" alt="" />
         </div>
         <div className="logo1">
         <img src="/Navbar/logo.png" alt="" />
         </div>
-        
-      </div></Link>
+        </Link>
+      </div>
       <div className="leftnav leftnavloggedin">
         <div className="search">
           <div className="sinput">
