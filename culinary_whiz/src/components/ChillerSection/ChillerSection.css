@@ -1,0 +1,93 @@
+.chiller{
+    height: 100vh;
+    width: 100vw;
+   
+}
+
+.chilltop{
+    font-family: 'inter',sans-serif;
+    font-weight: 200;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 20%;
+    width: 100%;
+    font-size: 4vmax;
+    
+}
+.chilltop div{
+    
+    height: fit-content;
+    width: fit-content;
+    border-bottom: 2px solid #F48C06 ;
+    margin-bottom: 1vmax;
+    
+}
+.chillbottom{
+    height: 80%;
+    width: 100%;
+    background-color: #F48C06;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chillcontent{
+    height: 80%;
+    width: 100%;
+    background-color: #F48C06;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.chillfood{
+    border: 2px solid black;
+    height: 100%;
+    width: 20%;
+    background-color: white;
+}
+
+.chillfood img{
+    object-fit: cover;
+    height: 80%;
+    width: 100%;
+    
+}
+
+.cfname{
+    height: 20%;
+    width: 100%;
+   
+}
+
+@media screen and (max-width: 500px){
+    .chillbottom{
+        height: 60%;
+    }
+    .chillcontent{
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        place-items: center;
+        /* height: 75vh; */
+    }
+    .chillfood{
+        height: fit-content;
+        width: 50%;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+    .chillfood img{
+        object-fit: cover;
+        height: 50%;
+        width: 100%;
+        
+    }
+    .cfname{
+        height: 50%;
+        width: 100%;
+       
+    }
+   
+    }

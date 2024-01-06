@@ -1,0 +1,103 @@
+.loginmodal{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'inter',sans-serif;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.modaldiv{
+    position: absolute;
+    height: 70%;
+    width: 40%;
+   background-color: white;
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #E85D04;
+    z-index: 200;
+}
+
+.mheader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    width: 100%;
+    background-color: #E85D04;
+    color: white;
+}
+
+.minput{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+.idiv{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4vmax;
+    margin: 0.8vmax 0;
+}
+.minput input{
+    font-size: 1vmax;
+    padding: 0 20px;
+    height: 100%;
+    width: 60%;
+   border-radius: 40px;
+   border: 2px solid black;
+}
+
+.loginsubmitbtn{
+    width: 100%;
+}
+.loginsubmitbtn button{
+    font-size: 1vmax;
+    border: none;
+    height: 100%;
+    width: 30%;
+   border-radius: 40px;
+   background-color: #E85D04;
+   color: white;
+   
+}
+.signup{
+    
+}
+.signup button{
+   margin-bottom: 1vmax;
+    background: transparent;
+    border: none;
+    height: fit-content;
+    text-decoration: underline;
+}
+
+.click{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errormsg{
+    margin: 0;
+    height: fit-content;
+    width: fit-content;
+    padding: 0;
+    color: red;
+    font-size: 1vmax;
+}

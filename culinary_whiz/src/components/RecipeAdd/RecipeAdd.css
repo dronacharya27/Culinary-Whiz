@@ -1,0 +1,265 @@
+.recipeadd{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'inter',sans-serif;
+
+}
+.artop{
+    height: 10%;
+    width: 100%;
+}
+
+.arbottom{
+    height: 120%;
+    width: 100%;
+    clear: both;
+}
+
+.headers{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    
+}
+.recipeuheader{
+    font-size: 3vmax;
+}
+.recipelheader{
+    font-size: 1vmax;
+}
+
+
+
+.recipeinputs{
+    border-top:1px solid #F48C06;
+    height: 85%;
+    width: 100%;
+    display: flex;
+}
+.addimgbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#F48C06;
+    height: 10%;
+    border-radius: 40px;
+    width: 70%;
+}
+#fileinput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+    color: transparent;
+   
+}
+.fileinput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.leftre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+   
+    gap: 2vmax;
+}
+.leftre textarea{
+    border: 1px solid #F48C06;
+    width: 80%;
+    font-family: 'inter',sans-serif;
+    height: 100%;
+    padding: 1vmax 1vmax;
+    resize: none;
+}
+.leftre input{
+    border: 1px solid #F48C06;
+    width: 80%;
+    
+    height: 100%;
+    padding: 0px 1vmax;
+}
+
+.rtitle{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+}
+.rdesc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+}
+.rtime{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+}
+.rightre{
+    
+    width: 70%;
+    height: 100%;
+    
+}
+
+.iheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+.iheader div{
+    font-size: 1.5vmax;
+    display: flex;
+    border-left:1px solid #F48C06 ;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.ingrees{
+    min-height:550px ;
+    border:1px solid #F48C06;
+    width: 100%;
+    display: flex;
+}
+.ingreinput{
+    
+    width: 100%;
+    
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ingredisplay{
+  border-left:1px solid #F48C06;
+  
+    width: 100%;
+   
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.displayrecipe{
+    
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    font-size: 1vmax;
+}
+.recipeinput{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vmax 0px;
+}
+.iinput{
+    border: 1px solid #F48C06;
+
+    height: 100%;
+    width: 100%;
+    
+    padding: 0 1vmax;
+}
+
+.add{
+    background-color:transparent ;
+    border: none;
+    color: white;
+    
+    height: 80%;
+    width: 100%;
+    border-radius: 40px;
+
+}
+
+.removef{
+    background-color:transparent ;
+    border: none;
+    color: white;
+    
+    height: 80%;
+    width: 100%;
+    border-radius: 40px;
+
+}
+
+.textinputs{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rtextinputs{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rtextinputs textarea{
+    
+    font-family: 'inter',sans-serif;
+    resize: none;
+    padding:1vmax 1vmax;
+    font-size: 1vmax;
+}
+
+.Rrecipeinput{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vmax 0px;
+}
+.inputbtns{
+    display: flex;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+}
+
+.submit{
+    border: none;
+    background-color: #F48C06;
+    border-radius: 40px;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.submitdiv{
+    height: 3vmax;
+    width: 10vmax;
+   
+
+}

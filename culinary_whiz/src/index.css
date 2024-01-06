@@ -1,0 +1,32 @@
+/* html{
+    font-size: 66.6%;
+}
+
+@media screen and (max-width:1024px) {
+    html{
+        font-size: 50%;
+    }
+    
+}
+@media screen and (max-width:435px) {
+    html{
+        font-size: 30%;
+    }
+    
+} */
+:root {
+margin: 0;
+padding: 0;
+}
+@font-face {
+    font-family:'Takeaway-Black-Regulart' ;
+    src: url('/HeroSection/Takeaway-Black-Regular.otf');
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    cursor: pointer;
+}

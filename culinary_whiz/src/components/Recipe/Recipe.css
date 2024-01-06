@@ -1,0 +1,98 @@
+.recipemain{
+    width: 100vw;
+    height: 100vh;
+}
+
+.rtop{
+    width: 100%;
+    height: 10%;
+   
+}
+
+.rbottom{
+    width: 100%;
+    height: 90%;
+    display: flex;
+
+}
+
+.nd{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 5vmax;
+}
+
+.rimg{
+    width: 50%;
+    height: 100%;
+
+}
+.rimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.detailre{
+    height: 80vh;
+    width: 100vw;
+    font-family: 'inter',sans-serif;
+    display: flex;
+    border-top:2px solid #F48C06;
+}
+
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    background-color:#F48C06;
+    height: 100%;
+}
+
+.steps{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    background-color: white;
+}
+.ingredientsheader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vmax;
+    height: 10%;
+    width: 100%;
+    color: white;
+    
+}
+
+.stepsheader{
+    display: flex;
+    align-items: center;
+    font-size: 3vmax;
+    height: 10%;
+    width: 100%;
+    padding-left: 1vmax;
+    
+}
+.description{
+    width: 90%;
+    font-size: 1.2vmax;
+    text-align: justify;
+    margin-top: 2vmax;
+}
+.recipename{
+   border-bottom:2px solid #F48C06;
+}
+
+.ingredientsdetails{
+    font-size: 1vmax;
+    font-family: 'inter',sans-serif;
+}
+.stepsdetails li{
+    margin-top: 1vmax;
+}
