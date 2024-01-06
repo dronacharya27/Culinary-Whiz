@@ -47,7 +47,8 @@ const Navbar = () => {
         </div>
         </div>      
     </div>:<div className='mainnav'>
-      <div className="rightnav">
+      
+    <Link to='/' ><div className="rightnav">
       <div className="logo2">
         <img src="/Navbar/logo1.png" alt="" />
         </div>
@@ -55,7 +56,7 @@ const Navbar = () => {
         <img src="/Navbar/logo.png" alt="" />
         </div>
         
-      </div>
+      </div></Link>
       <div className="leftnav">
         <div className="search">
           <div className="sinput">
