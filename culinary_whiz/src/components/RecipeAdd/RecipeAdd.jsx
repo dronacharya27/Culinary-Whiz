@@ -1,12 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './RecipeAdd.css'
 import { useRecipeAddContext } from '../../context/RecipeAddContext'
 import Navbar from '../Navbar/Navbar'
 import { Camera, CameraIcon, MinusCircle, PlusCircle } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { useLoginContext } from '../../context/LoginContext'
+import {ColorRing} from 'react-loader-spinner'
+
 const RecipeAdd = () => {
-    const {ingredientList,handleAddIngredient,handleRemoveIngredients,handleIngredientChange,handleAddStep,handleRemoveStep,handleStepChange,stepList,handleData,handleImg,postdata} = useRecipeAddContext()
+    const {ingredientList,handleAddIngredient,handleRemoveIngredients,handleIngredientChange,handleAddStep,handleRemoveStep,handleStepChange,stepList,handleData,handleImg,postdata,load} = useRecipeAddContext()
     const navigate = useNavigate()
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
   return (
     <div className='recipeadd'>
         <Navbar/>
@@ -16,32 +22,42 @@ const RecipeAdd = () => {
         <div className="recipeuheader">
             Contribute Your Culinary Brilliance
             </div>
-            <div className="recipelheader">
-            Add Your Signature Recipe!
-            </div>
+            
             <div className='submitdiv'>
                 <button className='submit' onClick={()=>postdata(navigate)}>Submit</button>
             </div>
+            {load?
+                    <div className="loaders" style={{position:'absolute',top:'50%'}}>
+                        <ColorRing
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="color-ring-loading"
+  wrapperStyle={{}}
+  wrapperClass="color-ring-wrapper"
+  colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+  />
+</div>:<></>}
         </div>
             
         <div className="recipeinputs">
             <div className="leftre">
             <div className="addimgbtn">
                 <div className="fileinput">
-                <input id='fileinput' type="file" multiple onChange={handleImg} accept="image/jpeg,image/png,image/gif"/><CameraIcon width='2vmax'/> 
+                <input id='fileinput' type="file" multiple onChange={handleImg} accept="image/jpeg,image/png,image/gif" required/><CameraIcon width='30%'/> 
 
                 </div>
             </div>
 
                 <div className="rtitle">
-                    <input type="text" placeholder='Recipe Name' name='name' onChange={handleData} />
+                    <input type="text" placeholder='Recipe Name' name='name' onChange={handleData} required/>
                 </div>
                 <div className="rdesc" >
-                    <textarea name="description" id="" cols="30" rows="10"  placeholder='Brief Description'onChange={handleData} ></textarea>
+                    <textarea name="description" id="" cols="30" rows="10"  placeholder='Brief Description'onChange={handleData} required></textarea>
                    
                 </div>
                 <div className="rtime" >
-                    <input name='time' type="text" placeholder='Cooking Time' onChange={handleData}/>
+                    <input name='time' type="text" placeholder='Cooking Time' onChange={handleData} required/>
                 </div>
             </div>
             <div className="rightre">

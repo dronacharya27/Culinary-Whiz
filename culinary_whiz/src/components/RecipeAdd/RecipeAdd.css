@@ -43,26 +43,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#F48C06;
+    
     height: 10%;
     border-radius: 40px;
-    width: 70%;
+    width: 80%;
 }
-#fileinput{
-    display: flex;
+.fileinput input::file-selector-button {
+    background-color: #F48C06;
+   font-size: 1vmax;
     align-items: center;
-    justify-content: center;
-    height: 50%;
-    width: 50%;
-    color: transparent;
-   
-}
+    border: none;
+    height: 100%;
+    width: 60%;
+    border-radius: 40px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    padding: 0;
+    margin: 0;
+  }
 .fileinput{
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 1vmax;
+    border: 1px solid black;
+    border-radius: 40px;
     height: 100%;
     width: 100%;
+    
 }
 .leftre{
     display: flex;
@@ -83,7 +91,7 @@
     resize: none;
 }
 .leftre input{
-    border: 1px solid #F48C06;
+    /* border: 1px solid #F48C06; */
     width: 80%;
     
     height: 100%;
@@ -260,6 +268,7 @@
 .submitdiv{
     height: 3vmax;
     width: 10vmax;
+    margin: 1vmax 0;
    
 
 }

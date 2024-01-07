@@ -48,7 +48,7 @@ const LoginModal = () => {
         {error_msg[0]}
                     </div>
                     {loading?
-                    <div className="loaders">
+                    <div className="loaders" style={{position:'absolute', top:'50%'}}>
                         <ColorRing
   visible={true}
   height="80"
@@ -58,7 +58,7 @@ const LoginModal = () => {
   wrapperClass="color-ring-wrapper"
   colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
   />
-</div>:<p></p>}
+</div>:<></>}
                     
             <div className='loginsubmitbtn idiv'>
                 <button type="submit" onClick={handlesignup}>Sign Up</button>
@@ -85,7 +85,7 @@ const LoginModal = () => {
         {error_msg}
                     </div>
                     {loading?
-                    <div className="loaders">
+                    <div className="loaders" style={{position:'absolute', top:'50%'}}>
                         <ColorRing
   visible={true}
   height="80"
@@ -95,7 +95,7 @@ const LoginModal = () => {
   wrapperClass="color-ring-wrapper"
   colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
   />
-</div>:<p></p>}
+</div>:<></>}
             <div className='loginsubmitbtn idiv'>
                 <button type="submit" onClick={handlelogin}>LogIn</button>
                 

@@ -8,7 +8,8 @@ const URL ='https://culinary-whiz-backend.onrender.com/recipe/'
 const URL2= 'https://culinary-whiz-backend.onrender.com/api/auth/users/me/'
 const TOKENURL='https://culinary-whiz-backend.onrender.com/api/auth/jwt/refresh/'
 const RecipeAddContextProvider =({children})=>{
-    
+
+const [load,setLoad]=useState(false)
     const[data,setData]=useState({
        name:'', 
        description:'',
@@ -82,6 +83,7 @@ const RecipeAddContextProvider =({children})=>{
 
 // Add Recipe
 const postdata = async(navigate)=>{
+    setLoad(true)
     const tempingredient = ingredientList.map((e)=>{
         return e['ingredient']
     })
@@ -121,17 +123,20 @@ const postdata = async(navigate)=>{
         try {
             const {data:res} = await axios.post(URL,formdata)
             console.log(res)
+            setLoad(false)
             navigate('/recipes')
         } catch (error) {
+            setLoad(false)
             console.log(error)
         }
     } catch (error) {
+        setLoad(false)
         console.log(error)
     }
         
 }
 
-   return(<RecipeAddContext.Provider value={{ingredientList,handleAddIngredient,handleRemoveIngredients,handleIngredientChange,handleAddStep,handleRemoveStep,handleStepChange,stepList,handleData,handleImg,postdata}}>
+   return(<RecipeAddContext.Provider value={{ingredientList,handleAddIngredient,handleRemoveIngredients,handleIngredientChange,handleAddStep,handleRemoveStep,handleStepChange,stepList,handleData,handleImg,postdata,load}}>
         {children}
     </RecipeAddContext.Provider>)
 }
