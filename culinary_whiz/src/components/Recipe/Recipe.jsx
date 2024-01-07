@@ -26,6 +26,9 @@ const Recipe = () => {
                 <div className='description'>
                   {k.description}
                 </div>
+                <div className="tim" style={{fontSize:'1vmax', color:'gray',marginTop:'1vmax'}}>
+                  Cook Time: {k.time} Minutes
+                </div>
             </div>
             <div className="rimg"> 
             <img src={k.image} alt="" />
