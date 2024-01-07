@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Recipe.css'
 import { useParams } from 'react-router-dom'
 import { useRecipeContext } from '../../context/RecipeContext'
@@ -6,7 +6,9 @@ const Recipe = () => {
   const{id}=useParams()
   const {recipes} = useRecipeContext()
 
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     
     <div className='recipemain'>

@@ -7,9 +7,11 @@ import { RecipeAddContextProvider } from './context/RecipeAddContext.jsx'
 import { RecipeContextProvider } from './context/RecipeContext.jsx'
 import {  QueryClient,QueryClientProvider, useQueryClient,} from '@tanstack/react-query'
 import { FilterContextProvider } from './context/FilterContext.jsx'
+
 const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    
     <QueryClientProvider client={queryClient}>
     <LoginContextProvider>
      
@@ -23,5 +25,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
    
     </LoginContextProvider>
     </QueryClientProvider>
+   
   </React.StrictMode>,
 )

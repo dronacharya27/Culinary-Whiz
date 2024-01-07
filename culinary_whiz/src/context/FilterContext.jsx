@@ -40,6 +40,7 @@ const updateFilterValue=(e,navigate)=>{
         payload:{name,value}
     })
     navigate('/recipes')
+    window.scrollTo(0, 0);
 }
     return(
         <FilterContext.Provider value={{updateFilterValue,...state}}>
